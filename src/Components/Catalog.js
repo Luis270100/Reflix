@@ -1,41 +1,36 @@
 import React, { Component } from 'react';
 import Movie from './Movie';
+import MovieRented from './MovieRented';
 
 
 class Catalog extends Component {
-    constructor() {
-        super()
-        this.state = {
-            budget: 20
-        }
-    }
-
-    UpdateBudget = (money) => {
-        this.setState({
-            budget : this.state.budget + money
-        })
-    }
-
-    rentMovie = ()=>{
-        let budget = [...this.state.budget]
-
-
-
-        
-    }
 
 
     render() {
 
-        let movies = this.props.movies
+        let movies = this.props.state.movies
+
         return (
             <div id="Catalog">
+
                 <div id="budget">
-                    Budget : {this.state.budget}
+                    Budget : ${this.props.state.budget}
                 </div>
                 <input type="text" placeholder="What movie are you looking?" />
                 <button>Search</button>
-                <Movie movies={movies} />
+                
+
+                {movies.map((m, index) => {
+                    return (m.isRented ? 
+                    <MovieRented movies={m} isRented={this.props.isRented} key={index} /> :
+                    null)
+                })}
+                <hr/>
+                {movies.map((m, index) => {
+
+                    return <Movie movies={m} isRented={this.props.isRented} key={index} />
+                })
+                }
 
             </div>)
     }
