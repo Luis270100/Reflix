@@ -1,0 +1,32 @@
+body{
+    background-color: black;
+}
+
+
+.link-div{
+    color: red;
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    display: absolute;
+}
+
+.link{
+    color: red;
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 15px
+}
+
+#navbar{
+    padding-top: 24px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+}

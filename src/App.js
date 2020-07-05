@@ -4,6 +4,7 @@ import { Home } from '../src/Components/Home'
 import Catalog from '../src/Components/Catalog'
 import MovieDetail from './Components/MovieDetail'
 import './App.css';
+import './css/Navbar.css';
 
 class App extends Component {
   constructor() {
@@ -55,8 +56,12 @@ class App extends Component {
       <Router>
         <div className="container">
           <div id="navbar">
-            <Link to="/">Home</Link>
-            <Link to="/catalog">Catalog</Link>
+            <div className="link-div">
+              <Link to="/" className="link">Home</Link>
+            </div>
+            <div className="link-div" className="link">
+              <Link to="/catalog" className="link">Catalog</Link>
+            </div>
           </div>
 
           {/* Routes here˘ */}
