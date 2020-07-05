@@ -14,18 +14,14 @@ class Movie extends Component {
     render() {
         let movies = this.props.movies
         return (
-            <div className="movie">
-
-                <div className="singleMovie" key={movies.id}>
-                    <Link to={`/movies/${movies.id}`}>
-                        <h4>{movies.title} - {movies.year}</h4>
-                        <img src={movies.img} alt={movies.title} />
-                    </Link>
-                    {movies.isRented ?
-                        <button onClick={this.updateButton}>-</button> :
-                        <button onClick={this.updateButton}>+</button>}
-                </div>
-
+            <div className="singleRentedMovie" key={movies.id}>
+                <Link to={`/movies/${movies.id}`} className="linkElement" style={{ textDecoration: 'none'}}>
+                    <h4 className="movieName">{movies.title} - {movies.year}</h4>
+                    <img src={movies.img} alt={movies.title} className="rented-Image"/>
+                </Link>
+                {movies.isRented ?
+                    <button className="movie-btt" onClick={this.updateButton}>-</button> :
+                    <button className="movie-btt" onClick={this.updateButton}>+</button>}
             </div>
         )
     }

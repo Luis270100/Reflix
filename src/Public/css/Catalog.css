@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+.search-bar{
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#budget-div{
+    font-size: 20px;
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.budgetText{
+    display: inline;
+    color: white;
+
+}
+
+.budget{
+    display: inline;
+    color: white;
+}
+
+.search-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-input{
+    width: 280px;
+    border-radius: 20px;
+    height: 28px;
+    text-align: center;
+    border: none;
+}
+
+#search-btt{
+    background-color: red;
+    font-family: 'Bangers', cursive;
+    width: 100px;
+    border: none;
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.movie-container{
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 90px;
+}
