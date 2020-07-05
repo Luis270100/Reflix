@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import '../css/Home.css'
+import {Link } from 'react-router-dom';
+import '../Public/css/Home.css';
 
 export class Home extends Component {
 
@@ -8,13 +8,21 @@ export class Home extends Component {
     render() {
 
         let users = this.props.users
+        console.log(users);
+        
         return (
             <div id="Home">
-                <div>WHO'S WATCHING?</div>
+                <div className="subtitle">WHO'S WATCHING?</div>
+                <div className="users">
                 {users.map((u, index) => {
-                    return <div id={u.name} className="users" key={index}>
-                        <Link to="/catalog"> {u.name}</Link> </div>
+                    return <Link to="/catalog" key={index} style={{ textDecoration: 'none'}}>
+                            <div id={u.name}  className="user-container">
+                            <div className="user-icon" style={{backgroundColor: u.color}}></div>
+                                <p className="user-name">{u.name}</p>
+                            </div>
+                            </Link>
                 })}
+                </div>
             </div>)
     }
 }

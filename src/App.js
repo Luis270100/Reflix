@@ -4,7 +4,7 @@ import { Home } from '../src/Components/Home'
 import Catalog from '../src/Components/Catalog'
 import MovieDetail from './Components/MovieDetail'
 import './App.css';
-import './css/Navbar.css';
+import './Public/css/Navbar.css';
 
 class App extends Component {
   constructor() {
@@ -59,8 +59,10 @@ class App extends Component {
             <div className="link-div">
               <Link to="/" className="link">Home</Link>
             </div>
-            <div className="link-div" className="link">
+            <div className="link-div">
               <Link to="/catalog" className="link">Catalog</Link>
+            </div>
+            <div className="link-div" id="Logo">
             </div>
           </div>
 

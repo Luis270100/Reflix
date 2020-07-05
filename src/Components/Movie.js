@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {  Link } from 'react-router-dom';
-import '../css/Movie.css'
+import '../Public/css/Movie.css'
 
 
 
