@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+body{
+    font-family: 'Bangers', cursive;
+}
+
+#description-container{
+    width: 100%;
+    max-width: 900px;
+    margin:auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#movieImage{
+    width: 300px;
+    border-radius: 10px;
+}
+
+
+.description{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#heading-description{
+    color: white;
+    display: block;
+    margin: 0 auto;
+    font-size: 38px;
+    text-align: center;
+}
+
+#movie-description{
+    color: white;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 24px;
+}
